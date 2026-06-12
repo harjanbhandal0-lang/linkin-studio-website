@@ -20,10 +20,29 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6">
           <Link href="/" className="text-charcoal hover:text-royal-blue transition-colors">
             Home
           </Link>
+          <div className="relative group">
+            <button className="text-charcoal hover:text-royal-blue transition-colors">
+              Services
+            </button>
+            <div className="absolute left-0 mt-2 w-48 bg-white border border-royal-blue/20 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+              <Link href="/wedding-films" className="block px-4 py-2 text-charcoal hover:bg-cream transition-colors">
+                Wedding Films
+              </Link>
+              <Link href="/photography" className="block px-4 py-2 text-charcoal hover:bg-cream transition-colors">
+                Photography
+              </Link>
+              <Link href="/bridal-wear" className="block px-4 py-2 text-charcoal hover:bg-cream transition-colors">
+                Bridal Wear
+              </Link>
+              <Link href="/accessories" className="block px-4 py-2 text-charcoal hover:bg-cream transition-colors">
+                Accessories
+              </Link>
+            </div>
+          </div>
           <Link href="/gallery" className="text-charcoal hover:text-royal-blue transition-colors">
             Gallery
           </Link>
@@ -60,6 +79,37 @@ export function Header() {
             >
               Home
             </Link>
+            <div className="border-t border-royal-blue/10 pt-2">
+              <p className="text-charcoal font-semibold text-sm mb-2">Services</p>
+              <Link
+                href="/wedding-films"
+                className="block text-charcoal hover:text-royal-blue transition-colors pl-4 py-1"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Wedding Films
+              </Link>
+              <Link
+                href="/photography"
+                className="block text-charcoal hover:text-royal-blue transition-colors pl-4 py-1"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Photography
+              </Link>
+              <Link
+                href="/bridal-wear"
+                className="block text-charcoal hover:text-royal-blue transition-colors pl-4 py-1"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Bridal Wear
+              </Link>
+              <Link
+                href="/accessories"
+                className="block text-charcoal hover:text-royal-blue transition-colors pl-4 py-1"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Accessories
+              </Link>
+            </div>
             <Link
               href="/gallery"
               className="text-charcoal hover:text-royal-blue transition-colors"
